@@ -439,10 +439,10 @@ def test_main(
     #             best_time, best_results = t, (num_sms, nvl_chunk_size)
 
 
-@unittest.skipIf(
-    not is_deep_ep_supported(),
-    "core is not compiled with XUP and XPU counts need larger equal to 8",
-)
+# @unittest.skipIf(
+#     not is_deep_ep_supported(),
+#     "core is not compiled with XUP and XPU counts need larger equal to 8",
+# )
 class TestCollectiveDeepEPAllToAllIntranode(TestDistBase):
     def init_env(self):
         paddle.distributed.init_parallel_env()
